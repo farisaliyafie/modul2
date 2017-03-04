@@ -6,10 +6,15 @@
  */
 public class OjeKampus
 {
+    /**
+     * Fungsi utama OjeKampus
+     * @param   args    Array string yang dapat menjadi argumen, default:null
+     * @return  none
+     */
     public void main(String[] args) {
        Lokasi lokasi1=new Lokasi("perum",14,06,"Rawalumbu");
        Lokasi per_yafie_awal=new Lokasi("Kampus UI",5,7,"Depok");
-       Lokasi per_yafie_akhir=new Lokasi("Kukusan",5,7,"Depok");
+       Lokasi per_yafie_akhir=new Lokasi("Kukusan",6,7,"Depok");
        Ojek ojek_farisali=new Ojek(DatabaseUser.getIDOjekTerakhir(),
                                     "farisali",lokasi1);
        Pelanggan p_yafie=new Pelanggan(DatabaseUser.getIDPelangganTerakhir(),
