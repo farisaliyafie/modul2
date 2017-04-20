@@ -1,73 +1,39 @@
+import java.util.regex.*;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 
 /**
  * Class will be used to describe user's detail
  * 
  * @author (Faris Ali Yafie)
- * @version (4 Maret 2017)
+ * @version (8 April 2017)
  */
-public class Pelanggan
+public class Pelanggan extends User
 {
-    private static int id;
-    private static String nama;
-
     /**
-     *Konstruktor kelas Pelanggan
-     *@param    id      nomor identitas pelanggan
-     *@param    nama    nama pelanggan
-     *@return   retun   nothing
+     * Constructor Pelanggan. 
+     * Metode yang pertama kali dipanggil ketika sebuah object dari kelas pelanggan diciptakan.
+     * @param int id    id pelanggan untuk object pelanggan baru.
+     * @param String nama   nama pelanggan untuk object pelanggan baru.
      */
-    public Pelanggan(int id, String nama)
+    public Pelanggan(int id, String nama, String telefon) 
     {
-        this.id=id;
-        this.nama=nama;
-    }
-
-    /**
-     *Getter indentitas pelanggan ojek
-     *@param    none    nothing
-     *@retun    id      mengembalikan nilai no identitas
-     */
-    public int getID()
-    {
-        return id;
+        // initialise instance variables
+        super(id,nama);
+        setTelefon(telefon);
     }
     
     /**
-     *Getter nama pelanggan ojek
-     *@param    none    nothing
-     *@retun    nama      mengembalikan nama ojek
-     */
-    public String getNama()
-    {
-        return nama;
-    }
+     * printData. 
+     * Metode untuk mencetak data pelanggan.
+     */    
+    public String toString(){
+        if(DatabasePesanan.getPesanan(this) == null){
+            return "Pelanggan" + " Nama : "+ nama + " Id : "+ id + "No.Tlp : " + telefon + "||";
+        }
+        Pesanan temp = DatabasePesanan.getPesanan(this);
+        return "Pelanggan" + " Nama : "+ nama + " Id : "+ id + "No.Tlp : " + telefon + " Pelanggan Awal :" + temp.getPenggunaAwal() + "||";
+    } 
     
-    /**
-     *Setter indentitas pelanggan ojek
-     *@param    id      nilai id yang di set
-     *@retun    none    nothing
-     */
-    public void setID(int id)
-    {
-        this.id=id;
-    }
-    
-    /**
-     *Setter nama pelanggan ojek
-     *@param    nama    nama pengemudi yang di set
-     *@retun    none    nothing
-     */
-    public void setNama(String nama)
-    {
-        this.nama=nama;
-    }
-    
-    /**
-     *Print informasi identitas dan nama pelanggan
-     */
-    public void printData()
-    {
-        System.out.println("ID Pelanggan : " + this.id);
-        System.out.println("Nama : " + this.nama);
-    }
 }

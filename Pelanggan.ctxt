@@ -1,20 +1,8 @@
 #BlueJ class context
-comment0.params=id\ nama
-comment0.target=Pelanggan(int,\ java.lang.String)
-comment0.text=\r\nKonstruktor\ kelas\ Pelanggan\r\n@param\ \ \ \ id\ \ \ \ \ \ nomor\ identitas\ pelanggan\r\n@param\ \ \ \ nama\ \ \ \ nama\ pelanggan\r\n@return\ \ \ retun\ \ \ nothing\r\n
+comment0.params=id\ nama\ telefon
+comment0.target=Pelanggan(int,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ Pelanggan.\ \r\n\ Metode\ yang\ pertama\ kali\ dipanggil\ ketika\ sebuah\ object\ dari\ kelas\ pelanggan\ diciptakan.\r\n\ @param\ int\ id\ \ \ \ id\ pelanggan\ untuk\ object\ pelanggan\ baru.\r\n\ @param\ String\ nama\ \ \ nama\ pelanggan\ untuk\ object\ pelanggan\ baru.\r\n
 comment1.params=
-comment1.target=int\ getID()
-comment1.text=\r\nGetter\ indentitas\ pelanggan\ ojek\r\n@param\ \ \ \ none\ \ \ \ nothing\r\n@retun\ \ \ \ id\ \ \ \ \ \ mengembalikan\ nilai\ no\ identitas\r\n
-comment2.params=
-comment2.target=java.lang.String\ getNama()
-comment2.text=\r\nGetter\ nama\ pelanggan\ ojek\r\n@param\ \ \ \ none\ \ \ \ nothing\r\n@retun\ \ \ \ nama\ \ \ \ \ \ mengembalikan\ nama\ ojek\r\n
-comment3.params=id
-comment3.target=void\ setID(int)
-comment3.text=\r\nSetter\ indentitas\ pelanggan\ ojek\r\n@param\ \ \ \ id\ \ \ \ \ \ nilai\ id\ yang\ di\ set\r\n@retun\ \ \ \ none\ \ \ \ nothing\r\n
-comment4.params=nama
-comment4.target=void\ setNama(java.lang.String)
-comment4.text=\r\nSetter\ nama\ pelanggan\ ojek\r\n@param\ \ \ \ nama\ \ \ \ nama\ pengemudi\ yang\ di\ set\r\n@retun\ \ \ \ none\ \ \ \ nothing\r\n
-comment5.params=
-comment5.target=void\ printData()
-comment5.text=\r\nPrint\ informasi\ identitas\ dan\ nama\ pelanggan\r\n
-numComments=6
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ printData.\ \r\n\ Metode\ untuk\ mencetak\ data\ pelanggan.\r\n
+numComments=2
